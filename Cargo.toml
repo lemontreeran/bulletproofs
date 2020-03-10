@@ -6,13 +6,14 @@ authors = ["Cathie Yun <cathie@chain.com>",
            "Oleg Andreev <oleganza@gmail.com>"]
 readme = "README.md"
 license = "MIT"
-repository = "https://github.com/dalek-cryptography/bulletproofs"
+repository = "https://github.com/lemontreeran/bulletproofs"
 categories = ["cryptography"]
 keywords = ["cryptography", "ristretto", "zero-knowledge", "bulletproofs"]
 description = "A pure-Rust implementation of Bulletproofs using Ristretto"
 
 [dependencies]
-curve25519-dalek = { version = "0.19", features = ["serde"] }
+# curve25519-dalek = { version = "0.19", features = ["serde"] }
+curve25519-dalek = { git = "https://github.com/dalek-cryptography/curve25519-dalek", tag = "0.19.0" }
 subtle = "0.7"
 sha3 = "0.7"
 digest = "0.7"
