@@ -23,7 +23,7 @@ serde = "1"
 serde_derive = "1"
 tiny-keccak = "1.4.1"
 failure = "0.1"
-merlin = { git = "https://github.com/dalek-cryptography/merlin", tag = "0.3.0" }
+# merlin = { git = "https://github.com/dalek-cryptography/merlin" }
 
 [dev-dependencies]
 hex = "^0.3"
