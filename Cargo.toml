@@ -21,7 +21,7 @@ rand = "0.5.0-pre.2"
 byteorder = "1.2.1"
 # serde = "1"
 serde = { version = "1.0", features = ["derive"] }
-# Serde_derive = "1"
+Serde_derive = "1.0.0"
 tiny-keccak = "1.4.1"
 failure = "0.1"
 merlin = { git = "https://github.com/dalek-cryptography/merlin", tag = "0.3.0" }
