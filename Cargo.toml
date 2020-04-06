@@ -14,7 +14,7 @@ description = "A pure-Rust implementation of Bulletproofs using Ristretto"
 [dependencies]
 # curve25519-dalek = { version = "0.19", features = ["serde"] }
 curve25519-dalek = { git = "https://github.com/lemontreeran/curve25519-dalek", tag = "0.19.1",  features = ["serde"] }
-subtle = { git = "https://github.com/dalek-cryptography/subtle", tag = "0.7.1" }
+subtle = { git = "https://github.com/dalek-cryptography/subtle", tag = "0.7.0" }
 sha3 = "0.7"
 digest = "0.7"
 rand = "0.5.0-pre.2"
