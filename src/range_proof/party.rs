@@ -8,6 +8,8 @@ use curve25519_dalek::ristretto::RistrettoPoint;
 use curve25519_dalek::scalar::Scalar;
 use curve25519_dalek::traits::MultiscalarMul;
 
+use subtle::ConditionallyAssignable;
+use subtle::Choice;
 use errors::MPCError;
 use generators::Generators;
 use rand::{CryptoRng, Rng};
@@ -66,7 +68,7 @@ impl<'a> PartyAwaitingPosition<'a> {
         // Compute A = <a_L, G> + <a_R, H> + a_blinding * B_blinding
         let mut A = gen_share.pedersen_gens.B_blinding * a_blinding;
 
-        use subtle::{Choice, ConditionallyAssignable};
+        // use subtle::{Choice, ConditionallyAssignable};
         for i in 0..self.n {
             // If v_i = 0, we add a_L[i] * G[i] + a_R[i] * H[i] = - H[i]
             // If v_i = 1, we add a_L[i] * G[i] + a_R[i] * H[i] =   G[i]
